@@ -1,7 +1,5 @@
-import * as webpack from 'webpack';
 import type { Configuration as WebpackDevServerConfiguration } from 'webpack-dev-server';
 import { Observable } from 'rxjs';
-import { extname } from 'path';
 
 export function runWebpackDevServer(
   config: any,
@@ -34,8 +32,8 @@ export function runWebpackDevServer(
     };
 
     const webpackServer = new WebpackDevServer(
-      devServerConfig,
-      webpackCompiler as any
+      webpackCompiler as any,
+      devServerConfig
     );
 
     try {
