@@ -118,7 +118,7 @@ export function withWeb(opts: WithWebOptions = {}) {
             : path.join(projectRoot, 'src/index.html'),
         }),
         new rspack.DefinePlugin({
-          'process.env.NODE_ENV': isProd ? "'production'" : "'development'",
+          'process.env.NODE_ENV': isProd ? '"production"' : '"development"',
         }),
       ],
     };
